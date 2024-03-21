@@ -2,6 +2,7 @@ import Label from "@/Components/Label";
 import Input from "@/Components/Input";
 import Button from "@/Components/Button";
 import { Link, Head } from "@inertiajs/inertia-react";
+import Authenticated from "@/Layouts/Authenticated/Index";
 
 export default function Register() {
     return (
@@ -74,12 +75,13 @@ export default function Register() {
                                 </div>
                             </div>
                             <div className="grid space-y-[14px] mt-[30px]">
-                                <Button>
-                                    <span className="text-base font-semibold">
-                                        Sign Up
-                                    </span>
-                                </Button>
-
+                                <Link href={route("prototype.dashboard")}>
+                                    <Button>
+                                        <span className="text-base font-semibold">
+                                            Sign Up
+                                        </span>
+                                    </Button>
+                                </Link>
                                 <Link href={route("prototype.login")}>
                                     <Button variant="light-outline">
                                         <span className="text-base text-white">
